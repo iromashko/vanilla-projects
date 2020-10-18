@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  font-family: 'Heebo', sans-serif;
+}
+.landing {
+  min-height: 100vh;
+  background: url(./hero.jpeg);
+  background-size: cover;
+  padding: 0rem 5rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+}
