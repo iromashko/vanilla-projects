@@ -5,26 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>100 Projects Challenge</title>
     <style>
-      body {
-        padding: 0 10px 0 10px;
+      main {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      }
+
+      .project {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        width: 80%;
       }
     </style>
   </head>
   <body>
     <h1>100 Projects Challenge</h1>
 
-    <a href="color-flipper">5. Color Flipper - HTML/CSS</a>
-    <br />
-    <a href="https://angular-private.vercel.app/photo-fetching-app"
-      >4. Photo-Fetching App - Angular</a
-    >
-    <br />
-    <a href="laptop-landing">3. Laptop Landing - HTML/CSS</a>
-    <br />
-    <a href="js-animations">2. Slide Animation - HTML/CSS/GSAP</a>
-    <br />
-    <a href="https://angular-projects-eight.vercel.app/chat"
-      >1. Chat App - HTML/CSS</a
-    >
+    <main>
+      <div class="project">
+        <a target="_blank" href="todo-app">6. Todo App - HTML/CSS/JS</a>
+      </div>
+      <div class="project">
+        <a target="_blank" href="color-flipper">
+          <h3>5. Color Flipper - HTML/JS</h3>
+          <img src="/_img_previews/color.png" alt="color" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="https://angular-private.vercel.app/photo-fetching-app">
+          <h3>4. Photo-Fetching App - Angular</h3>
+          <img src="/_img_previews/photo2.png" alt="photo" />
+        </a>
+      </div>
+      <div class="project">
+        <a target="_blank" href="laptop-landing">
+          <h3>3. Laptop Landing - HTML/CSS</h3>
+          <img src="/_img_previews/laptop.png" alt="laptop" />
+        </a>
+      </div>
+      <div class="project">
+        <a target="_blank" href="js-animations">
+          <h3>2. Slide Animation - HTML/CSS/GSAP</h3>
+          <img src="/_img_previews/slide.png" alt="slide" />
+        </a>
+      </div>
+      <div class="project">
+        <a
+          target="_blank"
+          href="https://angular-projects-eight.vercel.app/chat"
+        >
+          <h3>1. Chat App - HTML/CSS</h3>
+          <img src="/_img_previews/chat.png" alt="chat" />
+        </a>
+      </div>
+    </main>
   </body>
 </html>
