@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const searchBar = document.querySelector('#searchBar');
-  const outPut = document.querySelector('#reposContainer');
+  const output = document.querySelector('#reposContainer');
   const baseUrl = 'https://api.github.com/search/repositories';
   const message = document.querySelector('#message');
 
@@ -34,16 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .subscribe((repos) => {
       console.log(repos);
 
-      if (!repos) {
+      if (repos) {
         message.style.display = 'none';
         createChildren(repos['items']);
       } else {
-        outPut.innerHTML = '';
+        output.innerHTML = '';
         message.style.display = '';
       }
     });
 
   const createChildren = (arr) => {
+    output.innerHTML = '';
     arr.map((item) => {
       let div = document.createElement('div');
       div.classList.add('item');
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       div.appendChild(img);
       div.appendChild(repoTitle);
       div.appendChild(goButton);
-      outPut.appendChild(div);
+      output.appendChild(div);
     });
   };
 });
