@@ -142,16 +142,15 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
-  padding: 0.7rem;
 }
 
 .select::after {
   content: '\25BC';
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0px;
   background: #ff6f47;
-  padding: 0.7rem;
+  padding: 0.4rem;
   pointer-events: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
