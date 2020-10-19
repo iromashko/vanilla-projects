@@ -11,9 +11,24 @@
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       }
 
+      h1 {
+        padding: 20px;
+      }
+
       .project {
         display: flex;
         flex-direction: column;
+        padding: 20px;
+        transition: all 0.4s ease;
+        filter: brightness(90%);
+      }
+
+      .project:hover {
+        transform: translateY(-8px);
+        filter: brightness(100%);
+        -webkit-box-shadow: 2px 3px 16px -3px rgba(0, 0, 0, 0.52);
+        -moz-box-shadow: 2px 3px 16px -3px rgba(0, 0, 0, 0.52);
+        box-shadow: 2px 3px 16px -3px rgba(0, 0, 0, 0.52);
       }
 
       img {
@@ -27,7 +42,8 @@
     <main>
       <div class="project">
         <a target="_blank" href="todo-app">
-          <h3>6. Todo App - HTML/CSS/JS</h3>
+          <h3>6. Todo App - HTML/CSS/JS/LocalStorage</h3>
+          <img src="/_img_previews/todo.png" alt="todo" />
         </a>
       </div>
       <div class="project">

@@ -52,6 +52,7 @@ form {
   .todo-list {
     min-width: 50%;
     list-style: none;
+    margin-right: 14px;
   }
 
   .todo {
@@ -62,7 +63,7 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 
     li {
       flex: 1;
@@ -114,6 +115,7 @@ select {
   width: 10rem;
   cursor: pointer;
   padding: 0.7rem;
+  background-color: white;
 }
 
 .select {
