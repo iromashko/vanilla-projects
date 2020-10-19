@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reactive-search-bar/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gelasio:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Reactive Search Bar</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>
+          Html <br />
+          SearchBar <br />
+          with RxJs
+        </h1>
+        <p>
+          Look for repos using the search box, then go to the repo
+          documentation, clicking the "go to" button
+        </p>
+      </div>
+
+      <img src="/reactive-search-bar/cat.svg" alt="cat" />
+    </header>
+
+    <main>
+      <div>
+        <form>
+          <input type="search" id="searchBar" placeholder="eg. angular" />
+        </form>
+      </div>
+      <p id="message">No repos to display</p>
+      <div id="reposContainer" class="repos-container"></div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.3/rxjs.umd.min.js"
+      integrity="sha512-JnZPWAckMDks0CCIeGznqEo7ifmYK7VowHq/NVFlSXGkwxv4OBCJFy7nouOtJZmVldHo7FQLIdeWTI55yyZc4Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/reactive-search-bar/script.js"></script>
+  </body>
+</html>
