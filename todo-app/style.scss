@@ -43,3 +43,98 @@ form {
     }
   }
 }
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .todo-list {
+    min-width: 50%;
+    list-style: none;
+  }
+
+  .todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    li {
+      flex: 1;
+    }
+  }
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.complete-btn {
+  background: green;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.7rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7rem;
+
+  &::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff6f47;
+    padding: 0.7rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    background: white;
+    color: #ff6f47;
+  }
+}
