@@ -12,6 +12,7 @@
       }
 
       h1 {
+        text-align: center;
         padding: 20px;
       }
 
@@ -39,15 +40,44 @@
       img {
         width: 80%;
       }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        background: rgb(240, 240, 240);
+      }
+
+      li {
+        padding: 15px;
+        list-style: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+
+      li:hover {
+        border-bottom: 2px solid gray;
+      }
     </style>
   </head>
   <body>
     <h1>100 Projects Challenge</h1>
 
+    <div class="filter">
+      <ul>
+        <li>Web</li>
+        <li>Angular</li>
+        <li>Node</li>
+        <li>Socket.io</li>
+        <li>Rxjs</li>
+      </ul>
+    </div>
+
     <main>
       <div class="project">
         <a target="_blank" href="custom-video-player">
-          <h3>12. Custom Video Player - HTML/CSS</h3>
+          <h3>12. Custom Video Player - HTML/CSS/JS</h3>
           <img
             src="/_img_previews/custom-video-player.png"
             alt="custom-video-player"
