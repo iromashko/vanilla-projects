@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/custom-video-player/progress.css" />
+    <link rel="stylesheet" href="/custom-video-player/style.css" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <h1>Custom Video Player</h1>
+    <video
+      src="video.mp4"
+      id="video"
+      class="screen"
+      poster="poster.png"
+    ></video>
+
+    <div class="controls">
+      <button class="btn" id="play">
+        <i class="fa fa-play fa-2x"></i>
+      </button>
+      <button class="btn" id="stop">
+        <i class="fa fa-stop fa-2x"></i>
+      </button>
+      <input
+        type="range"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        id="progress"
+        value="0"
+      />
+      <span class="timestamp" id="timestamp">00:00</spanc>
+    </div>
+    <script src="/custom-video-player/script.js"></script>
+  </body>
+</html>
