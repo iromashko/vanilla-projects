@@ -2,6 +2,7 @@ let canvas;
 let ctx;
 let WIDTH = 1200;
 let HEIGHT = 800;
+let output;
 
 let tileW = 20;
 let tileH = 20;
@@ -9,21 +10,122 @@ let tileH = 20;
 let tileRowCount = 25;
 let tileColumnCount = 40;
 
-let tiles = [];
-for (let c = 0; c < tileColumnCount; c++) {
-  tiles[c] = [];
-  for (let r = 0; r < tileRowCount; r++) {
-    tiles[c][r] = { x: c * (tileW + 3), y: r * (tileH + 3), state: 'e' };
-  }
-}
-
 dragok = false;
 
 boundX = 0;
 boundY = 0;
 
-tiles[0][0].state = 's';
-tiles[tileColumnCount - 1][tileRowCount - 1].state = 'f';
+let tiles = [];
+
+init();
+
+reset();
+
+function reset() {
+  for (let c = 0; c < tileColumnCount; c++) {
+    tiles[c] = [];
+    for (let r = 0; r < tileRowCount; r++) {
+      tiles[c][r] = { x: c * (tileW + 3), y: r * (tileH + 3), state: 'e' };
+    }
+  }
+
+  tiles[0][0].state = 's';
+  tiles[tileColumnCount - 1][tileRowCount - 1].state = 'f';
+
+  output.innerHTML = '';
+}
+
+function solve() {
+  let Xqueue = [0];
+  let Yqueue = [0];
+
+  let pathFound = false;
+
+  let xLoc;
+  let yLoc;
+
+  while (Xqueue.length > 0 && !pathFound) {
+    xLoc = Xqueue.shift();
+    yLoc = Yqueue.shift();
+
+    if (xLoc > 0) {
+      if (tiles[xLoc - 1][yLoc].state === 'f') {
+        pathFound = true;
+      }
+    }
+    if (xLoc < tileColumnCount - 1) {
+      if (tiles[xLoc + 1][yLoc].state === 'f') {
+        pathFound = true;
+      }
+    }
+    if (yLoc > 0) {
+      if (tiles[xLoc][yLoc - 1].state === 'f') {
+        pathFound = true;
+      }
+    }
+    if (yLoc < tileRowCount - 1) {
+      if (tiles[xLoc][yLoc + 1].state === 'f') {
+        pathFound = true;
+      }
+    }
+    //
+    if (xLoc > 0) {
+      if (tiles[xLoc - 1][yLoc].state === 'e') {
+        Xqueue.push(xLoc - 1);
+        Yqueue.push(yLoc);
+        tiles[xLoc - 1][yLoc].state = tiles[xLoc][yLoc].state + 'l';
+      }
+    }
+    if (xLoc < tileColumnCount - 1) {
+      if (tiles[xLoc + 1][yLoc].state === 'e') {
+        Xqueue.push(xLoc + 1);
+        Yqueue.push(yLoc);
+        tiles[xLoc + 1][yLoc].state = tiles[xLoc][yLoc].state + 'r';
+      }
+    }
+    if (yLoc > 0) {
+      if (tiles[xLoc][yLoc - 1].state === 'e') {
+        Xqueue.push(xLoc);
+        Yqueue.push(yLoc - 1);
+        tiles[xLoc][yLoc - 1].state = tiles[xLoc][yLoc].state + 'u';
+      }
+    }
+    if (yLoc < tileRowCount - 1) {
+      if (tiles[xLoc][yLoc + 1].state === 'e') {
+        Xqueue.push(xLoc);
+        Yqueue.push(yLoc + 1);
+        tiles[xLoc][yLoc + 1].state = tiles[xLoc][yLoc].state + 'd';
+      }
+    }
+  }
+
+  if (!pathFound) {
+    output.innerHTML = 'No Solution';
+  } else {
+    output.innerHTML = 'Solved';
+
+    let path = tiles[xLoc][yLoc].state;
+    let pathLength = path.length;
+    let currX = 0;
+    let currY = 0;
+
+    for (let i = 0; i < pathLength - 1; i++) {
+      if (path.charAt(i + 1) === 'u') {
+        currY--;
+      }
+      if (path.charAt(i + 1) === 'd') {
+        currY++;
+      }
+      if (path.charAt(i + 1) === 'r') {
+        currX++;
+      }
+      if (path.charAt(i + 1) === 'l') {
+        currX--;
+      }
+      tiles[currX][currY].state = 'x';
+    }
+  }
+}
 
 function rect(x, y, w, h, state) {
   if (state === 's') {
@@ -34,6 +136,10 @@ function rect(x, y, w, h, state) {
     ctx.fillStyle = 'lightgray';
   } else if (state === 'w') {
     ctx.fillStyle = 'blue';
+  } else if (state === 'x') {
+    ctx.fillStyle = 'green';
+  } else {
+    ctx.fillStyle = 'lightgray';
   }
 
   ctx.beginPath();
@@ -59,10 +165,9 @@ function draw() {
 function init() {
   canvas = document.getElementById('myCanvas');
   ctx = canvas.getContext('2d');
+  output = document.getElementById('outcome');
   return setInterval(draw, 10);
 }
-
-init();
 
 function myDown(e) {
   canvas.onmousemove = myMove;

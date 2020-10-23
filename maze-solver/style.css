@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center center;
+}
+/*# sourceMappingURL=style.css.map */
