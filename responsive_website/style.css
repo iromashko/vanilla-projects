@@ -1,5 +1,8 @@
 :root {
   --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
 }
 
 * {
@@ -163,6 +166,11 @@ img {
   font-size: 35px;
 }
 
+.cloud .grid {
+  -ms-grid-columns: 4fr 3fr;
+      grid-template-columns: 4fr 3fr;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -181,6 +189,26 @@ img {
 .btn:hover {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-light {
+  background-color: var(--light-color);
+  color: white;
+}
+
+.btn-dark {
+  background-color: var(--dark-color);
+  color: dark;
 }
 
 .cli .grid {
@@ -230,6 +258,26 @@ img {
 .grid-3 {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-light {
+  background-color: var(--light-color);
+  color: white;
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: #333;
 }
 
 .text-center {

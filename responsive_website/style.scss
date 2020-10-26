@@ -1,5 +1,8 @@
 :root {
   --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
 }
 
 * {
@@ -158,6 +161,12 @@ img {
   }
 }
 
+.cloud {
+  .grid {
+    grid-template-columns: 4fr 3fr;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -175,6 +184,23 @@ img {
 
   &:hover {
     transform: scale(0.98);
+  }
+
+  &-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  &-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  &-light {
+    background-color: var(--light-color);
+    color: white;
+  }
+  &-dark {
+    background-color: var(--dark-color);
+    color: dark;
   }
 }
 
@@ -210,6 +236,25 @@ img {
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.bg {
+  &-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  &-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  &-light {
+    background-color: var(--light-color);
+    color: white;
+  }
+  &-dark {
+    background-color: var(--dark-color);
+    color: #333;
+  }
 }
 
 .text-center {
