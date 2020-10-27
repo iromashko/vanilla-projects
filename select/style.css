@@ -19,6 +19,7 @@
 .select {
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .select.open .select__dropdown {
@@ -27,6 +28,10 @@
 
 .select.open .select__input {
   border-bottom: none;
+}
+
+.select.open .select__backdrop {
+  display: block;
 }
 
 .select__input {
@@ -71,10 +76,25 @@
   border-bottom: 1px solid #ccc;
 }
 
+.select__item.selected {
+  background-color: beige;
+}
+
 .select__item:hover {
   background-color: #eee;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in;
   transition: background-color 0.15s ease-in;
+}
+
+.select__backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
