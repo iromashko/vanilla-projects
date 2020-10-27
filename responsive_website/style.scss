@@ -357,12 +357,28 @@ img {
     img {
       width: 200px;
       justify-self: flex-end;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
     }
   }
   &-sub-head {
     img {
       width: 300px;
       justify-self: flex-end;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
     }
   }
   &-main {
@@ -381,6 +397,18 @@ img {
 
     .grid {
       padding: 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+
+      & > *:first-child,
+      & > *:nth-child(2) {
+        @media (max-width: 768px) {
+          grid-column: -1 / 1;
+        }
+      }
     }
   }
 }
@@ -390,6 +418,14 @@ img {
     img {
       width: 200px;
       justify-self: flex-end;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
     }
   }
 
@@ -440,8 +476,25 @@ img {
   }
 }
 
-.text-center {
-  text-align: center;
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-primary {
+    color: var(--primary-color);
+  }
+
+  &-secondary {
+    color: var(--secondary-color);
+  }
+
+  &-light {
+    color: var(--light-color);
+  }
+  &-dark {
+    color: var(--dark-color);
+  }
 }
 
 code,
