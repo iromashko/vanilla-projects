@@ -1,0 +1,80 @@
+.app {
+  padding-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body {
+  font-family: Roboto, sans-serif;
+}
+
+.wrap {
+  width: 500px;
+}
+
+.select {
+  width: 100%;
+  position: relative;
+}
+
+.select.open .select__dropdown {
+  display: block;
+}
+
+.select.open .select__input {
+  border-bottom: none;
+}
+
+.select__input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.select__dropdown {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 46px;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.3);
+}
+
+.select__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.select__item {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.select__item:hover {
+  background-color: #eee;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+/*# sourceMappingURL=style.css.map */
