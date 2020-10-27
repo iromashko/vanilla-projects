@@ -3,6 +3,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 * {
@@ -48,6 +50,10 @@ img {
 
   .flex {
     justify-content: space-between;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 
   ul {
@@ -62,6 +68,15 @@ img {
         border-bottom: 2px white solid;
       }
     }
+
+    @media (max-width: 500px) {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @media (max-width: 500px) {
+    height: 110px;
   }
 }
 
@@ -83,6 +98,16 @@ img {
     grid-template-columns: 55% 45%;
     gap: 30px;
     overflow: visible;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &-text {
+    text-align: center;
+    margin-top: 40px;
   }
 
   &-form {
@@ -110,6 +135,11 @@ img {
     input:focus {
       outline: none;
     }
+
+    @media (max-width: 768px) {
+      justify-self: center;
+      margin: auto;
+    }
   }
 
   &::before,
@@ -122,6 +152,10 @@ img {
     left: 0;
     background: white;
     transform: skewY(-3deg);
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
   }
 }
 
@@ -158,12 +192,22 @@ img {
     h3 {
       font-size: 35px;
     }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 }
 
 .cloud {
   .grid {
     grid-template-columns: 4fr 3fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 }
 
@@ -200,7 +244,7 @@ img {
   }
   &-dark {
     background-color: var(--dark-color);
-    color: dark;
+    color: #fff;
   }
 }
 
@@ -213,7 +257,17 @@ img {
       *:first-child {
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
+
+        @media (max-width: 768px) {
+          grid-column: 1;
+          grid-row: 1;
+        }
       }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
   }
 }
@@ -232,6 +286,11 @@ img {
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .grid-3 {
@@ -249,16 +308,167 @@ img {
   }
   &-light {
     background-color: var(--light-color);
-    color: white;
+    color: black;
   }
   &-dark {
     background-color: var(--dark-color);
-    color: #333;
+    color: white;
+  }
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: white;
+}
+
+.footer {
+  .social a {
+    margin: 0 10px;
+  }
+}
+
+.languages {
+  .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.3s ease;
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      transform: translateY(-15px);
+    }
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+.features {
+  &-head {
+    img {
+      width: 200px;
+      justify-self: flex-end;
+    }
+  }
+  &-sub-head {
+    img {
+      width: 300px;
+      justify-self: flex-end;
+    }
+  }
+  &-main {
+    .card {
+      & > i {
+        margin-right: 20px;
+      }
+
+      &:first-child {
+        grid-column: 1 / span 3;
+      }
+      &:nth-child(2) {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    .grid {
+      padding: 30px;
+    }
+  }
+}
+
+.docs {
+  &-head {
+    img {
+      width: 200px;
+      justify-self: flex-end;
+    }
+  }
+
+  &-main {
+    h3 {
+      margin: 20px 0;
+    }
+
+    .grid {
+      grid-template-columns: 1fr 2fr;
+      align-items: flex-start;
+    }
+
+    nav {
+      li {
+        font-size: 17px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+    a {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.alert {
+  background: var(--light-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+
+  i {
+    margin-right: 10px;
+  }
+
+  &-success {
+    background-color: var(--success-color);
+    color: white;
+  }
+  &-error {
+    background-color: var(--error-color);
+    color: white;
   }
 }
 
 .text-center {
   text-align: center;
+}
+
+code,
+pre {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
 }
 
 .my-1 {
