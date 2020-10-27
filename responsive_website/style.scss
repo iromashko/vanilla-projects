@@ -108,6 +108,8 @@ img {
   &-text {
     text-align: center;
     margin-top: 40px;
+
+    animation: slideInFromLeft 1s ease-in-out;
   }
 
   &-form {
@@ -118,6 +120,7 @@ img {
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in-out;
 
     .form-control {
       margin: 30px 0;
@@ -139,6 +142,8 @@ img {
     @media (max-width: 768px) {
       justify-self: center;
       margin: auto;
+
+      animation: slideInFromBottom 1s ease-in-out;
     }
   }
 
@@ -177,6 +182,7 @@ img {
 
 .stats {
   padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in-out;
 
   &-heading {
     max-width: 500px;
@@ -494,6 +500,39 @@ img {
   }
   &-dark {
     color: var(--dark-color);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

@@ -128,6 +128,8 @@ img {
 .showcase-text {
   text-align: center;
   margin-top: 40px;
+  -webkit-animation: slideInFromLeft 1s ease-in-out;
+          animation: slideInFromLeft 1s ease-in-out;
 }
 
 .showcase-form {
@@ -138,6 +140,8 @@ img {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
+  -webkit-animation: slideInFromRight 1s ease-in-out;
+          animation: slideInFromRight 1s ease-in-out;
 }
 
 .showcase-form .form-control {
@@ -162,6 +166,8 @@ img {
     -ms-grid-column-align: center;
         justify-self: center;
     margin: auto;
+    -webkit-animation: slideInFromBottom 1s ease-in-out;
+            animation: slideInFromBottom 1s ease-in-out;
   }
 }
 
@@ -202,6 +208,8 @@ img {
 
 .stats {
   padding-top: 100px;
+  -webkit-animation: slideInFromBottom 1s ease-in-out;
+          animation: slideInFromBottom 1s ease-in-out;
 }
 
 .stats-heading {
@@ -566,6 +574,94 @@ img {
 
 .text-dark {
   color: var(--dark-color);
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 code,
