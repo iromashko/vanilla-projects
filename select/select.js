@@ -1,28 +1,20 @@
-export const getTemplate = () => {
+export const getTemplate = (data = [], placeholder) => {
+  const text = placeholder ?? 'Default placeholder';
+
+  const items = data.map((item) => {
+    return `
+      <li class="select__item" data-type="item" data-value="${item.id}">${item.value}</li>
+    `;
+  });
+
   return `
   <div class="select__input" data-type="input">
-            <span>Select</span>
+            <span>${text}</span>
             <i class="fa fa-chevron-down" data-type="arrow"></i>
           </div>
           <div class="select__dropdown">
             <ul class="select__list">
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
-              <li class="select__item">123</li>
+             ${items.join('')}
             </ul>
           </div>
   `;
@@ -31,13 +23,16 @@ export const getTemplate = () => {
 export class Select {
   constructor(selector, options) {
     this.$el = document.querySelector(selector);
+    this.options = options;
     this.#render();
     this.#setup();
   }
 
   #render() {
+    const { placeholder, data } = this.options;
+
     this.$el.classList.add('select');
-    this.$el.innerHTML = getTemplate();
+    this.$el.innerHTML = getTemplate(data, placeholder);
   }
 
   #setup() {
