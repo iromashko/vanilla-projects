@@ -1,5 +1,6 @@
 :root {
   --primary-color: #e50914;
+  --dark-color: #141414;
 }
 
 * {
@@ -38,6 +39,65 @@ img {
   width: 100%;
 }
 
+table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead th {
+    text-transform: uppercase;
+    padding: 0.6rem;
+  }
+
+  tbody {
+    tr {
+      td {
+        color: #999;
+        padding: 0.7rem 1.2rem;
+
+        &:first-child {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(odd) {
+        background: #222;
+      }
+    }
+  }
+}
+
+.footer {
+  max-width: 75%;
+  margin: 1rem auto;
+  overflow: auto;
+  color: #999;
+
+  a {
+    color: currentColor;
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  li {
+    line-height: 1.9;
+  }
+}
+
 .showcase {
   width: 100%;
   height: 93vh;
@@ -56,6 +116,12 @@ img {
       left: 50%;
 
       transform: translate(-50%, -50%);
+
+      @media (max-width: 960px) {
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+      }
     }
 
     a {
@@ -82,6 +148,11 @@ img {
       font-size: 2.6rem;
       line-height: 1.2rem;
       margin: 0 0 2rem;
+
+      @media (max-width: 960px) {
+        font-size: 3rem;
+        line-height: 1;
+      }
     }
 
     p {
@@ -91,6 +162,10 @@ img {
       font-size: 0.9rem;
       line-height: 1.25;
       margin: 0 0 2rem;
+
+      @media (max-width: 960px) {
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -104,6 +179,14 @@ img {
     z-index: 1;
     background: rgba(0, 0, 0, 0.6);
     box-shadow: inset 120px 100px 250px #000000;
+
+    @media (max-width: 700px) {
+      box-shadow: inset -3px 14px 70px 20px #000000;
+    }
+  }
+
+  @media (max-width: 960px) {
+    height: 70vh;
   }
 }
 
@@ -133,6 +216,11 @@ img {
     font-size: 1rem;
     padding: 0.75rem 1.05rem;
     text-transform: uppercase;
+
+    @media (max-width: 960px) {
+      font-size: 0.8rem;
+      padding: 0.7rem;
+    }
   }
 
   &-lg {
@@ -140,4 +228,152 @@ img {
     padding: 0.4rem 0.65rem;
     text-transform: uppercase;
   }
+
+  &-icon {
+    margin-left: 1rem;
+  }
+}
+
+.tabs {
+  background: var(--dark-color);
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+
+    & > div {
+      padding: 0.7rem 0;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.tab-border {
+  border-bottom: var(--primary-color) 4px solid;
+}
+
+.tab-content {
+  padding: 3rem 1rem;
+  background: #000;
+  color: white;
+}
+
+#tab-1-content {
+  .tab-1-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+}
+
+#tab-2-content {
+  .tab-2-content-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  .tab-2-content-bottom {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+
+  @media (max-width: 700px) {
+    max-width: 90%;
+  }
+}
+
+.text {
+  &-xl {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 960px) {
+      font-size: 1rem;
+    }
+  }
+  &-lg {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 960px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &-md {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 960px) {
+      font-size: 0.6rem;
+    }
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-dark {
+    color: #999;
+  }
+}
+
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+  display: none;
+}
+.show {
+  display: block !important;
 }
