@@ -37,10 +37,26 @@
         <p><strong>It's free to join and easy to use.</strong></p>
 
         <form class="form">
-          <label class="form__label" for="email">Your Email</label>
+          <label class="form__label" for="email"
+            >Your Email
+
+            <span
+              class="form__tooltip"
+              data-tooltip="Please enter your email address"
+              >?</span
+            >
+          </label>
           <input type="email" class="form__text" id="email" name="email" />
 
-          <label class="form__label" for="password">Password</label>
+          <label class="form__label" for="password"
+            >Password
+
+            <span
+              class="form__tooltip"
+              data-tooltip="Minimum 12 characters, at least one capital and one number"
+              >?</span
+            >
+          </label>
           <input
             type="password"
             class="form__text"
@@ -54,11 +70,17 @@
           <input
             type="password"
             name="password-reenter"
+            class="form__text"
             id="password-reenter"
           />
 
-          <p class="fineprint">
-            <input type="checkbox" name="agreement" id="agreement" />
+          <p class="fineprint flex-center">
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              name="agreement"
+              id="agreement"
+            />
             <label for="agreement"
               >I am 13 years of age or older AND agree to the
               <a href="#">terms and services</a></label
@@ -73,7 +95,7 @@
             />
           </p>
 
-          <button>Sign up now</button>
+          <button class="button">Sign up now</button>
 
           <a href="#" class="fineprint">I already have an account</a>
         </form>

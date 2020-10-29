@@ -38,10 +38,21 @@ body {
           align-items: center;
   font-family: motiva-sans, sans-serif;
   background-color: var(--clr-4);
+  background-image: url(/signup-form/steam-bg.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
   color: var(--clr-body);
   font-size: var(--fs-1);
   font-weight: var(--fw-1);
   line-height: 1.6;
+}
+
+a {
+  color: var(--clr-1);
+}
+
+a:hover {
+  color: inherit;
 }
 
 p {
@@ -56,11 +67,22 @@ strong {
   height: 50px;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .title,
 .subheading {
   color: var(--clr-1);
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1;
+  margin: 0.6em 0;
 }
 
 .steam-signup-form {
@@ -69,8 +91,8 @@ strong {
   width: 960px;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
-  -ms-grid-columns: 35% 1fr 1em;
-      grid-template-columns: 35% 1fr 1em;
+  -ms-grid-columns: 35% minmax(500px, 1fr) 1em;
+      grid-template-columns: 35% minmax(500px, 1fr) 1em;
   position: relative;
 }
 
@@ -79,7 +101,10 @@ strong {
       -ms-flex-order: 2;
           order: 2;
   background-color: var(--clr-2);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0)), to(var(--clr-dark)));
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), var(--clr-dark));
   padding: 3rem;
+  width: 93%;
   grid-row: 1 / -1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -139,10 +164,85 @@ strong {
 }
 
 .form__label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form__text {
-  margin-bottom: 0.25em;
+  all: unset;
+  display: block;
+  margin: 0.25em 0 1em;
+  background: var(--clr-dark);
+  width: 95%;
+  padding: 0.6em;
+}
+
+.form__checkbox {
+  margin-right: 0.5em;
+}
+
+.form__tooltip {
+  font-size: var(--fs-small);
+  background: var(--clr-dark);
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 0.5em;
+  position: relative;
+}
+
+.form__tooltip::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  padding: 1em;
+  background: var(--clr-dark);
+  color: var(--clr-1);
+  bottom: 1.5em;
+  text-align: left;
+  width: 250px;
+}
+
+.form__tooltip:hover::after {
+  display: block;
+}
+
+.fineprint {
+  font-size: var(--fs-small);
+}
+
+.recaptcha {
+  margin: 0.5em 0 1em;
+}
+
+.button {
+  all: unset;
+  display: inline-block;
+  background: var(--clr-5);
+  padding: 0.5em 1.75em;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  font-weight: var(--fw-3);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform ease-in-out 150;
+  transition: -webkit-transform ease-in-out 150;
+  transition: transform ease-in-out 150;
+  transition: transform ease-in-out 150, -webkit-transform ease-in-out 150;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.button + * {
+  margin-left: 2em;
 }
 /*# sourceMappingURL=style.css.map */
