@@ -22,13 +22,24 @@
   <body>
     <div id="app">
       <div class="square square-titled square-html">
-        <textarea></textarea>
+        <textarea><h1>100 Projects Challenge</h1></textarea>
       </div>
       <div class="square square-titled square-javascript">
-        <textarea></textarea>
+        <textarea>
+const h1 = document.querySelector('h1');
+h1.addEventListener('mouseover', () => h1.classList.add('blue'));
+h1.addEventListener('mouseleave', () => h1.classList.remove('blue'));</textarea
+        >
       </div>
       <div class="square square-titled square-css">
-        <textarea></textarea>
+        <textarea>
+h1 {
+  color:red
+} 
+.blue {
+  color: blue
+}</textarea
+        >
       </div>
       <div class="square" data-iframe></div>
     </div>
