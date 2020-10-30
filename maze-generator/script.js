@@ -1,15 +1,15 @@
-const CELL_SIZE = 50;
-const PADDING = 5;
+const CELL_SIZE = 30;
+const PADDING = 3;
 const WALL_COLOR = 'black';
 const FREE_COLOR = 'white';
 const BACKGROUND_COLOR = 'gray';
 const TRACTOR_COLOR = 'red';
-const DELAY_TIMEOUT = 100;
+const DELAY_TIMEOUT = 10;
 
-const TRACTORS_NUMBER = 1;
+const TRACTORS_NUMBER = 3;
 
-const COLUMNS = 11;
-const ROWS = 11;
+const COLUMNS = 21;
+const ROWS = 21;
 
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
@@ -31,9 +31,16 @@ const tractor = {
 matrix[0][0] = true;
 
 async function main() {
-  while (true) {
-    moveTractor();
+  while (!isValidMaze()) {
+    for (const tractor of tractors) {
+      moveTractor(tractor);
+    }
+
     drawMaze();
+
+    for (const tractor of tractors) {
+      drawTractor(tractor);
+    }
     await delay(DELAY_TIMEOUT);
   }
 }
@@ -81,19 +88,9 @@ function drawMaze() {
       context.fill();
     }
   }
-
-  context.beginPath();
-  context.rect(
-    PADDING + tractor.x * CELL_SIZE,
-    PADDING + tractor.y * CELL_SIZE,
-    CELL_SIZE,
-    CELL_SIZE
-  );
-  context.fillStyle = TRACTOR_COLOR;
-  context.fill();
 }
 
-function moveTractor() {
+function moveTractor(tractor) {
   const directions = [];
   if (tractor.x > 0) directions.push([-2, 0]);
   if (tractor.x < COLUMNS - 1) directions.push([2, 0]);
@@ -106,6 +103,7 @@ function moveTractor() {
   tractor.y += dy;
 
   if (!matrix[tractor.y][tractor.x]) {
+    matrix[tractor.y][tractor.x] = true;
     matrix[tractor.y - dy / 2][tractor.x - dx / 2] = true;
   }
 }
@@ -113,4 +111,27 @@ function moveTractor() {
 function getRandomItem(array) {
   const index = Math.floor(Math.random() * array.length);
   return array[index];
+}
+
+function drawTractor(tractor) {
+  context.beginPath();
+  context.rect(
+    PADDING + tractor.x * CELL_SIZE,
+    PADDING + tractor.y * CELL_SIZE,
+    CELL_SIZE,
+    CELL_SIZE
+  );
+  context.fillStyle = TRACTOR_COLOR;
+  context.fill();
+}
+
+function isValidMaze() {
+  for (let y = 0; y < COLUMNS; y += 2) {
+    for (let x = 0; x < ROWS; x += 2) {
+      if (!matrix[y][x]) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
