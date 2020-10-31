@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/virtual-keyboard/style.css" />
+    <title>Virtual Keyboard</title>
+  </head>
+  <body>
+    <h1>Virtual Keyboard</h1>
+    <h3>Features</h3>
+    <ul>
+      <li>Easy to integrate</li>
+      <li>Responsive</li>
+      <li>Vanilla JS (<strong>no libraries required</strong>)</li>
+    </ul>
+    <textarea
+      style="position: absolute; top: 130px; right: 30px; width: 300px"
+    ></textarea>
+
+    <div class="keyboard">
+      <div class="keyboard__keys">
+        <button type="button" class="keyboard__key">a</button>
+        <button type="button" class="keyboard__key">a</button>
+        <button type="button" class="keyboard__key keyboard__key--wide">
+          <i class="fas fa-backspace"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="/virtual-keyboard/script.js"></script>
+  </body>
+</html>
