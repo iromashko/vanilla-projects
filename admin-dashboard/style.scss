@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a5aaad;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3ea175;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5aaad;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +64,14 @@ body {
   grid-template-areas:
     'sidebar nav nav nav'
     'sidebar main main main';
+
+  @media only screen and (max-width: 978px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'nav'
+      'main';
+  }
 }
 
 .navbar {
@@ -71,6 +98,10 @@ body {
       border-bottom: 3px solid #265acc;
       padding-bottom: 12px;
     }
+
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
   }
 
   &__right {
@@ -84,7 +115,7 @@ body {
 
       & > i {
         color: #a5aaad;
-        font-size: 16px;
+        font-size: 22px;
         border-radius: 50px;
         background: white;
         box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px white;
@@ -144,6 +175,12 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     margin: 20px 0;
+
+    @media only screen and (max-width: 978px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -156,10 +193,11 @@ main {
   background: white;
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px white;
 
-  &_inner {
+  &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
 
     & > span {
       font-size: 25px;
@@ -174,6 +212,10 @@ main {
   padding: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+
+  @media only screen and (max-width: 978px) {
+    display: none;
+  }
 }
 
 .sidebar {
@@ -183,6 +225,12 @@ main {
   }
 
   &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f3f4f6;
+    margin-bottom: 30px;
+
     & > div > img {
       width: 75px;
       object-fit: contain;
@@ -194,7 +242,74 @@ main {
     & > i {
       font-size: 18px;
       display: none;
+
+      @media only screen and (max-width: 978px) {
+        display: inline;
+      }
     }
+  }
+
+  &__menu {
+    & > h2 {
+      color: #3ea175;
+      font-size: 16px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding: 0 10px;
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    color: #f3f4f6;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+
+    & > a {
+      text-decoration: none;
+      color: #a5aaad;
+      font-weight: 700;
+    }
+
+    & > i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+
+  &__logout {
+    margin-top: 20px;
+    padding: 10px;
+    color: #e65061;
+
+    & > a {
+      text-decoration: none;
+      color: #e65061;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    & > i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+
+  &_responsive {
+    display: inline !important;
+    z-index: 8888 !important;
+    left: 0 !important;
+    position: absolute;
+  }
+}
+
+.active_menu_link {
+  background: rgba(62, 161, 117, 0.3);
+  color: #3ea175;
+
+  & a {
+    color: #3ea175;
   }
 }
 
@@ -273,6 +388,11 @@ main {
       margin-top: 30px;
     }
   }
+
+  @media only screen and (max-width: 858px) {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
 }
 
 .card1 {
@@ -306,4 +426,10 @@ main {
   padding: 25px;
   border-radius: 5px;
   font-size: 14px;
+}
+
+.nav_icon {
+  @media only screen and (max-width: 978px) {
+    display: inline;
+  }
 }
