@@ -18,7 +18,7 @@ window.onload = function () {
     let btn = colour_btn_els[i];
     btn.addEventListener('click', function () {
       document.querySelector('.colour.selected').classList.remove('selected');
-      img.src = `xr-${this.dataset.name}.png`;
+      img.src = `/interactive_product/xr-${this.dataset.name}.png`;
       this.classList.add('selected');
       imgery.style.backgroundColor = this.dataset.colour;
     });
