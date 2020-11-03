@@ -1,24 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-:root {
-  --primary-color: #fafafa;
-  --secondary-color: #220000;
-  --instagram-color: #cc0068;
-  --facebook-color: #39579b;
-  --twitter-color: #1da1f2;
-  --youtube-color: #f80000;
-}
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 nav {
