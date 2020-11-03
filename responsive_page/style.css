@@ -16,6 +16,15 @@ li {
   text-decoration: none;
 }
 
+:root {
+  --primary-color: #fafafa;
+  --secondary-color: #220000;
+  --instagram-color: #cc0068;
+  --facebook-color: #39579b;
+  --twitter-color: #1da1f2;
+  --youtube-color: #f80000;
+}
+
 nav {
   position: fixed;
   top: 0;
