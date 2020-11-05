@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide.current .content {
+  opacity: 1;
+  -webkit-transform: translateX(600px);
+          transform: translateX(600px);
+  -webkit-transition: all 0.7s ease-in-out 0.3s;
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  width: 600px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide:first-child {
+  background: url(/image-slider/1.jpeg) no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+  background: url(/image-slider/2.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(3) {
+  background: url(/image-slider/3.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(4) {
+  background: url(/image-slider/4.jpeg) no-repeat center top/cover;
+}
+
+.buttons button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: white;
+  color: #333;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+  .slide.current .content {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
