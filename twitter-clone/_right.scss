@@ -1,0 +1,47 @@
+.right {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  position: relative;
+
+  &-content-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    input {
+      width: 20rem;
+      height: 4.5rem;
+      margin-right: 1rem;
+      font-size: 1.6rem;
+      padding: 0 1rem;
+      border: 0.1rem solid #ddd;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      transition: background-color 0.3s;
+
+      &:focus {
+        background-color: #d9ebf7;
+        outline: none;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 5.5rem;
+      left: 0;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #a7a6a6;
+    }
+    div {
+      position: relative;
+    }
+  }
+}
+
+.middle-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

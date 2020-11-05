@@ -1,0 +1,26 @@
+.left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: #1aa1f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-content {
+    div {
+      display: flex;
+      align-items: center;
+      margin: 4rem;
+      color: #fff;
+    }
+
+    i {
+      font-size: 3rem;
+      margin-right: 2rem;
+    }
+
+    &-heading {
+      font-size: 2rem;
+    }
+  }
+}
