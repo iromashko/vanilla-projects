@@ -13,6 +13,12 @@ const postModalX = document.querySelector('.modal-header i');
 const modalPostBtn = document.querySelector('.modal-header button');
 const modalFooterPlus = document.querySelector('.modal-footer span');
 const modalInput = document.querySelector('.modal-input');
+const user = document.querySelector('.user');
+const sidebar = document.querySelector('.sidebar');
+const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+const xBtn = document.querySelector('.sidebar-header i');
+const toggle = document.querySelector('.toggle');
+const circle = document.querySelector('.circle');
 
 const goToLoginPage = () => {
   mainPage.style.display = 'none';
@@ -84,4 +90,27 @@ modalInput.addEventListener('blur', (e) => {
   if (e.target.value === '') {
     changeOpacity(0.5);
   }
+});
+
+user.addEventListener('click', () => {
+  sidebar.classList.add('sidebar-display');
+  sidebarWrapper.classList.add('sidebar-wrapper-display');
+});
+
+xBtn.addEventListener('click', () => {
+  sidebar.classList.remove('sidebar-display');
+  sidebarWrapper.classList.remove('sidebar-wrapper-display');
+});
+
+const darkElements1 = document.querySelectorAll('.dark-mode-1');
+const darkElements2 = document.querySelectorAll('.dark-mode-2');
+
+toggle.addEventListener('click', () => {
+  circle.classList.toggle('move');
+  Array.from(darkElements1).map((el) => {
+    el.classList.toggle('dark-1');
+  });
+  Array.from(darkElements2).map((el) => {
+    el.classList.toggle('dark-2');
+  });
 });
