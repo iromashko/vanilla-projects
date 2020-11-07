@@ -1,9 +1,13 @@
 .dark {
+  &-mode {
+    margin-top: 3rem;
+  }
+
   &-1 {
     background-color: #1c2938;
   }
   &-2 {
-    background-color: #10171e;
+    background-color: #10171e !important;
   }
 }
 
@@ -12,5 +16,5 @@
 }
 
 .border-color {
-  border-color: #444;
+  border-color: #444 !important;
 }
