@@ -71,7 +71,7 @@
       <button class="btn btn-success" id="btn-create">Create</button>
       <button class="btn btn-primary" id="btn-read">Read</button>
       <button class="btn btn-warning" id="btn-update">Update</button>
-      <button class="btn btn-danger" id="btn-delete">Delete</button>
+      <button class="btn btn-danger" id="btn-delete">Delete All</button>
     </div>
 
     <div class="container d-flex">
@@ -114,6 +114,17 @@
         </tbody>
       </table>
     </div>
+    <div class="container text-center">
+      <div id="notfound"></div>
+    </div>
+
+    <div class="w-100 btn btn-success insertmsg">
+      Data Inserted Successfully
+    </div>
+    <div class="w-100 btn btn-warning updatemsg">
+      Data Updated!! Refresh Database to See Result
+    </div>
+    <div class="w-100 btn btn-danger deletemsg">Data Deleted!</div>
 
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 
