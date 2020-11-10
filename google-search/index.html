@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/google-search/style.css" />
+    <title>Google Search</title>
+  </head>
+  <body class="text-gray-800 text-sm">
+    <header class="flex justify-between w-full">
+      <div class="flex space-x-4 p-6">
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Store</a>
+      </div>
+      <div class="flex">
+        <div class="flex space-x-4 p-6">
+          <a href="#" class="hover:underline">Gmail</a>
+          <a href="#" class="hover:underline">Images</a>
+          <a href="#" class="pl-2">
+            <i class="fas fa-th text-lg"></i>
+          </a>
+        </div>
+        <a href="#" class="pt-4 pr-8">
+          <img
+            src="http://robohash.org/google"
+            alt="img"
+            class="rounded-full h-8 w-8 border"
+          />
+        </a>
+      </div>
+    </header>
+    <main class="container px-8 mx-auto pt-14 max-w-xl flex flex-col space-y-6">
+      <img src="/google-search/logo.gif" alt="img" class="h-32 mx-auto" />
+      <div
+        class="rounded-full py-2 px-4 flex border-2 border-gray-300 hover:shadow-md transition-all duration-500"
+      >
+        <div class="place-self-center text-gray-500 cursor-pointer">
+          <i class="fas fa-search text-lg"></i>
+        </div>
+
+        <div class="flex px-4 w-full">
+          <input
+            type="text"
+            class="w-full border-none outline-none text-base"
+          />
+        </div>
+        <div class="place-self-center text-gray-500 cursor-pointer">
+          <i class="fas fa-microphone text-lg"></i>
+        </div>
+      </div>
+      <div class="mx-auto flex space-x-2">
+        <input
+          type="submit"
+          class="px-4 py-2 bg-gray-300 cursor-pointer rounded transition-all duration-500 hover:shadow-md"
+          value="Google Search"
+        />
+
+        <button
+          class="px-4 py-2 rounded bg-gray-300 transition-all duration-500 hover:shadow-md"
+        >
+          I`m Feeling Lucky
+        </button>
+      </div>
+    </main>
+    <footer
+      class="flex justify-between absolute bottom-0 w-full bg-gray-300 leading-10 px-8"
+    >
+      <div class="space-x-6">
+        <a href="#" class="hover:underline">Advertising</a>
+        <a href="#" class="hover:underline">Business</a>
+        <a href="#" class="hover:underline">How Search Works</a>
+      </div>
+
+      <div class="space-x-6">
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Terms</a>
+        <a href="#" class="hover:underline">Settings</a>
+      </div>
+    </footer>
+    <script src="/google-search/script.js"></script>
+  </body>
+</html>
