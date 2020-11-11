@@ -191,3 +191,24 @@ img {
     @include set-background($danger-color);
   }
 }
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  align-items: center;
+
+  & > div:first-child {
+    text-align: center;
+  }
+
+  &-form-header {
+    padding: 0.5rem;
+  }
+
+  img {
+    width: 150px;
+  }
+}
+
+@import 'mobile';

@@ -548,4 +548,92 @@ img {
   background-color: #dc3545;
   color: #fff;
 }
+
+.post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post > div:first-child {
+  text-align: center;
+}
+
+.post-form-header {
+  padding: 0.5rem;
+}
+
+.post img {
+  width: 150px;
+}
+
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+  .x-large {
+    font-size: 3rem;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .navbar {
+    display: block;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar ul {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar h1 {
+    margin-bottom: 1rem;
+  }
+  .container {
+    margin-top: 8rem;
+  }
+  .dash-buttons a {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  .profile {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile ul {
+    display: none;
+  }
+  .profile-grid {
+        grid-template-areas: 'top' 'about' 'exp' 'edu' 'github';
+  }
+  .profile-about .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .post {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .post a,
+  .post button {
+    padding: 0.3rem 0.4rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
