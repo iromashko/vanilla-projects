@@ -132,7 +132,7 @@
 
 .bg-danger {
   background-color: #dc3545;
-  color: #333;
+  color: #fff;
 }
 
 .bg-white {
@@ -193,7 +193,7 @@
 
 .btn.btn-danger {
   background-color: #dc3545;
-  color: #333;
+  color: #fff;
 }
 
 .btn.btn-danger:hover {
@@ -219,18 +219,22 @@
 }
 
 .alert.alert-dark {
-  background-color: #17a2b8;
+  background-color: #343a40;
   color: #fff;
 }
 
 .alert.alert-success {
-  background-color: #17a2b8;
+  background-color: #28a745;
   color: #fff;
 }
 
 .alert.alert-danger {
-  background-color: #17a2b8;
+  background-color: #dc3545;
   color: #fff;
+}
+
+.round-img {
+  border-radius: 50%;
 }
 
 .form-group {
@@ -344,5 +348,18 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+
+.profile {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 4fr 2fr;
+      grid-template-columns: 2fr 4fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  line-height: 1.8;
 }
 /*# sourceMappingURL=style.css.map */
