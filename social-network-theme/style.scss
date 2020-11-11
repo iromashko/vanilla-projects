@@ -84,3 +84,110 @@ img {
   padding: 1rem;
   line-height: 1.8;
 }
+
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'about about'
+    'exp edu'
+    'github github';
+  gap: 1rem;
+
+  .profile-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 250px;
+      background-color: rgb(247, 247, 247);
+    }
+
+    .icons {
+      a {
+        color: #fff;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+  .profile-about {
+    grid-area: about;
+    text-align: center;
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .profile-exp {
+    grid-area: exp;
+  }
+  .profile-edu {
+    grid-area: edu;
+  }
+
+  .profile-exp,
+  .profile-edu {
+    & > div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dotted #ccc;
+      &:last-child {
+        border: none;
+      }
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .profile-github {
+    grid-area: github;
+
+    .repo {
+      display: flex;
+
+      & > div:first-child {
+        flex: 7;
+        flex-basis: 70%;
+      }
+      & > div:last-child {
+        flex: 3;
+        flex-basis: 20%;
+      }
+    }
+  }
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: $light-color;
+  color: #333;
+
+  &.badge-primary {
+    @include set-background($primary-color);
+  }
+  &.badge-dark {
+    @include set-background($dark-color);
+  }
+  &.badge-success {
+    @include set-background($success-color);
+  }
+  &.badge-danger {
+    @include set-background($danger-color);
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/social-network-theme/style.css" />
+    <title>Welcome to the DevConnector</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="/social-network-theme/dashboard.html">
+          <i class="fas fa-code"></i> DevConnector
+        </a>
+      </h1>
+      <ul>
+        <li>
+          <a href="/social-network-theme/profiles.html">Developers</a>
+        </li>
+        <li>
+          <a href="/social-network-theme/posts.html">Posts</a>
+        </li>
+        <li>
+          <a href="/social-network-theme/dashboard.html">
+            <i class="fas fa-user"></i>
+            <span class="hide-sm">Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="/social-network-theme/login.html">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="hide-sm">Logout</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="container">
+      <h1 class="large text-primary">Create Your Profile</h1>
+      <p class="lead">
+        <i class="fas fa-user"></i> Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Nemo, adipisci.
+      </p>
+      <small>* = required fields</small>
+      <form class="form">
+        <select name="status">
+          <option value="0">* Select Professional Status</option>
+          <option value="Developer">Developer</option>
+          <option value="Junior Developer">Junior Developer</option>
+        </select>
+        <small class="form-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </small>
+
+        <div class="form-group">
+          <input type="text" placeholder="Company" name="company" />
+          <small class="form-text">
+            Lorem ipsum dolor sit amet consectetur.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Website" name="website" />
+          <small class="form-text">
+            Lorem ipsum dolor sit amet consectetur.
+          </small>
+        </div>
+
+        <div class="my-2">
+          <button type="button" class="btn btn-light">
+            Lorem ipsum dolor sit amet.
+          </button>
+          <span>Optional</span>
+        </div>
+
+        <div class="form-group social-input">
+          <i class="fab fa-twitter fa-2x"></i>
+          <input type="text" placeholder="Twitter URL" name="twitter" />
+        </div>
+
+        <input type="submit" class="btn btn-primary my-1" />
+        <a
+          href="/social-network-theme/dashboard.html"
+          class="btn btn-light my-1"
+          >Go Back</a
+        >
+      </form>
+    </section>
+
+    <script src="/social-network-theme/script.js"></script>
+  </body>
+</html>
