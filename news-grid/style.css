@@ -109,6 +109,11 @@ h6 {
   text-align: center;
 }
 
+.card {
+  background-color: #fff;
+  padding: 1rem;
+}
+
 #main-nav {
   background: #fff;
   position: -webkit-sticky;
@@ -202,5 +207,13 @@ h6 {
 
 #showcase .showcase-content p {
   margin-bottom: 1rem;
+}
+
+#home-articles .articles-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

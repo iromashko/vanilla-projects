@@ -105,6 +105,11 @@ h6 {
   }
 }
 
+.card {
+  background-color: #fff;
+  padding: 1rem;
+}
+
 #main-nav {
   background: #fff;
   position: sticky;
@@ -186,5 +191,13 @@ h6 {
     p {
       margin-bottom: 1rem;
     }
+  }
+}
+
+#home-articles {
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }
