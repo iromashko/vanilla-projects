@@ -31,6 +31,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0.5rem 0;
+}
+
 ul {
   list-style: none;
 }
@@ -112,6 +116,70 @@ h6 {
 .card {
   background-color: #fff;
   padding: 1rem;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #555;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--primary-color) !important;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: white;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: white;
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
 }
 
 #main-nav {
@@ -215,5 +283,64 @@ h6 {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+#main-footer {
+  background: var(--dark-color);
+  color: white;
+}
+
+#main-footer .footer-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+#main-footer .footer-container > *:last-child {
+  background: #444;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+  width: 90%;
+}
+
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
