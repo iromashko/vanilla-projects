@@ -124,6 +124,17 @@ h6 {
   }
 }
 
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  gap: 1.5rem;
+
+  > *:first-child {
+    grid-row: 1 / span 3;
+  }
+}
+
 .bg {
   &-dark {
     background: var(--dark-color);
@@ -175,6 +186,10 @@ h6 {
   &-3 {
     padding: 3rem;
   }
+}
+
+.l-heading {
+  font-size: 3rem;
 }
 
 #main-nav {
@@ -278,6 +293,20 @@ h6 {
 
     > *:last-child {
       grid-column: 2 / span 2;
+    }
+  }
+}
+
+#article {
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 0.5rem;
+
+    .category {
+      margin-top: 0.4rem;
     }
   }
 }
