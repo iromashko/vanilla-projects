@@ -133,6 +133,11 @@ h6 {
   > *:first-child {
     grid-row: 1 / span 3;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 .bg {
@@ -215,11 +220,19 @@ h6 {
 
     .logo {
       width: 180px;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
     }
 
     ul {
       justify-self: end;
       display: flex;
+
+      @media (max-width: 768px) {
+        justify-self: center;
+      }
 
       li {
         a {
@@ -234,6 +247,10 @@ h6 {
           &:hover {
             background: var(--light-color);
             color: var(--dark-color);
+          }
+
+          @media (max-width: 768px) {
+            padding: 0.5rem;
           }
         }
       }
@@ -265,6 +282,10 @@ h6 {
     justify-content: center;
     align-items: center;
     height: 50vh;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .showcase-content {
@@ -281,6 +302,10 @@ h6 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr !important;
+    }
 
     > *:first-child,
     > *:last-child {
@@ -319,12 +344,28 @@ h6 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
+    > *:first-child,
+    > *:nth-child(2) {
+      @media (max-width: 600px) {
+        border-bottom: 1px dotted #444;
+        padding-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr !important;
+    }
+
     > *:last-child {
       background: #444;
       grid-column: 1 / -1;
       text-align: center;
       padding: 0.5rem;
       font-size: 0.75rem;
+
+      @media (max-width: 600px) {
+        grid-column: 1;
+      }
     }
 
     input[type='email'] {
@@ -343,5 +384,30 @@ h6 {
 
   a {
     color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-nav {
+    .social {
+      display: none;
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+  }
+
+  #home-articles {
+    .articles-container {
+      grid-template-columns: repeat(2, 1fr);
+
+      > *:first-child,
+      > *:last-child {
+        grid-template-columns: 1fr;
+        grid-column: 1;
+      }
+    }
   }
 }
