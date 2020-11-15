@@ -57,6 +57,54 @@ h6 {
   overflow: hidden;
 }
 
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+
+  &-sports {
+    background: var(--sports-color);
+  }
+  &-ent {
+    background: var(--ent-color);
+  }
+  &-tech {
+    background: var(--tech-color);
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+
+  &-light {
+    background: var(--light-color);
+  }
+  &-primary {
+    background: var(--primary-color);
+  }
+  &-secondary {
+    background: var(--secondary-color);
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 #main-nav {
   background: #fff;
   position: sticky;
@@ -102,6 +150,41 @@ h6 {
           }
         }
       }
+    }
+  }
+}
+
+#showcase {
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: url(https://source.unsplash.com/featured/?sport) no-repeat
+      center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  .showcase-content {
+    z-index: 1;
+
+    p {
+      margin-bottom: 1rem;
     }
   }
 }
