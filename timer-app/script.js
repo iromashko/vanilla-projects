@@ -5,7 +5,7 @@ let timerObj = {
 };
 
 function soundAlarm() {
-  let amount = 3;
+  let amount = 5;
   let audio = new Audio('Timer_Sound_Effect.mp3');
 
   function playSound() {
@@ -14,7 +14,7 @@ function soundAlarm() {
     audio.play();
   }
 
-  for (let i = 0; i < amount; i++) {
+  for (let i = 1; i < amount; i++) {
     setTimeout(playSound, 1200 * i);
   }
 }
@@ -70,10 +70,10 @@ function startTimer() {
       }
       timerObj.seconds = 59;
       timerObj.minutes--;
-
-      updateValue('minutes', timerObj.minutes);
-      updateValue('seconds', timerObj.seconds);
     }
+
+    updateValue('minutes', timerObj.minutes);
+    updateValue('seconds', timerObj.seconds);
   }, 1000);
 }
 
@@ -82,7 +82,8 @@ function stopTimer() {
   buttonManager(['start', true], ['pause', false], ['stop', false]);
   unfreezeInput();
   updateValue('minutes', $('#minutes-input').val());
-  updateValue('seconds', $('#seconds-input').val());
+  let seconds = $('#seconds-input').val() || '0';
+  updateValue('seconds', seconds);
 }
 
 function pauseTimer() {
