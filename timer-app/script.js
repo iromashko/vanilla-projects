@@ -6,7 +6,7 @@ let timerObj = {
 
 function soundAlarm() {
   let amount = 5;
-  let audio = new Audio('Timer_Sound_Effect.mp3');
+  let audio = new Audio('/timer-app/Timer_Sound_Effect.mp3');
 
   function playSound() {
     audio.pause();
