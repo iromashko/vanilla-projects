@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/quick-autocomplete/style.css" />
+    <title>Quick Autocomplete</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="m-auto col-md-6">
+          <h3 class="mb-3 text-center">
+            <i class="fas fa-flag-usa"> State Capital Lookup</i>
+          </h3>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="search"
+              placeholder="Enter state name or abbreviation..."
+            />
+          </div>
+
+          <div id="match-list"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/quick-autocomplete/script.js"></script>
+  </body>
+</html>
