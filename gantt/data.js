@@ -76,17 +76,27 @@ var tasks = [{
   'taskId': 1,
   'parentTaskId': 0,
   'taskTitle': 'Software Development',
-  'startDate': new Date('2019-02-21T05:00:00.000Z'),
-  'endDate': new Date('2019-07-04T12:00:00.000Z'),
+  'startDate': new Date('2020-01-21T05:00:00.000Z'),
+  'endDate': new Date('2020-06-04T12:00:00.000Z'),
+  'taskProgress': 31,
+  'taskColor': 'red'
+},{
+  'taskId': 2,
+  'parentTaskId': 0,
+  'taskTitle': 'Software Development',
+  'startDate': new Date('2020-02-21T05:00:00.000Z'),
+  'endDate': new Date('2020-07-04T12:00:00.000Z'),
+  'taskProgress': 31,
+  'taskColor': 'red'
+},{
+  'taskId': 3,
+  'parentTaskId': 0,
+  'taskTitle': 'Software Development',
+  'startDate': new Date('2020-02-21T05:00:00.000Z'),
+  'endDate': new Date('2020-07-04T12:00:00.000Z'),
   'taskProgress': 31,
   'taskColor': 'red'
 }
 ];
 
-var dependencies = [{
-  'depId': 0,
-  'preId': 1,
-  'sucId': 2,
-  'depType': 0
-}
-];
+

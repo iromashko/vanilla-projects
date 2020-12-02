@@ -26,13 +26,6 @@ $(function() {
       progressExpr: "taskProgress",
       titleExpr: "taskTitle",
       colorExpr: "taskColor"
-  },
-  dependencies: {
-      dataSource: dependencies,
-      keyExpr: "depId",
-      predecessorIdExpr: "preId",
-      successorIdExpr: "sucId",
-      typeExpr: "depType"
   }
   });
 });
