@@ -19,13 +19,14 @@ $(function() {
   $("#gantt").dxGantt({
   tasks: {
       dataSource: tasks,
+      scaleType: 'quarters',
       keyExpr: "taskId",
       parentIdExpr: "parentTaskId",
       startExpr: "startDate",
       endExpr: "endDate",
       progressExpr: "taskProgress",
       titleExpr: "taskTitle",
-      colorExpr: "taskColor"
+      colorExpr: "taskColor",
   }
   });
 });

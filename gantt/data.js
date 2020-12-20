@@ -79,15 +79,15 @@ var tasks = [{
   'startDate': new Date('2020-01-21T05:00:00.000Z'),
   'endDate': new Date('2020-06-04T12:00:00.000Z'),
   'taskProgress': 31,
-  'taskColor': 'red'
+  'taskColor': 'darkblue'
 },{
   'taskId': 2,
-  'parentTaskId': 0,
+  'parentTaskId': 1,
   'taskTitle': 'Software Development',
   'startDate': new Date('2020-02-21T05:00:00.000Z'),
   'endDate': new Date('2020-07-04T12:00:00.000Z'),
   'taskProgress': 31,
-  'taskColor': 'red'
+  'taskColor': 'darkblue'
 },{
   'taskId': 3,
   'parentTaskId': 0,
@@ -95,7 +95,7 @@ var tasks = [{
   'startDate': new Date('2020-02-21T05:00:00.000Z'),
   'endDate': new Date('2020-07-04T12:00:00.000Z'),
   'taskProgress': 31,
-  'taskColor': 'red'
+  'taskColor': 'darkblue'
 }
 ];
 
