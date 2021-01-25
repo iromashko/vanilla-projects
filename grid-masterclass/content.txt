@@ -1,0 +1,60 @@
+2: Our Story
+2.1: Hello and welcome to hamburger.co. We’ve been making delicious burgers since the last 15 years. And along
+the way we’ve picked up a few things about how to make the most delicious burgers and steak.
+2.2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam. invidunt ut labore et dolore magna aliquyam erat, sed diam. Lorem
+ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam. invidunt ut labore et dolore magna aliquyam erat, sed diam. eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam. invidunt ut labore et dolore magna
+aliquyam erat, sed diam.
+2.3.1: 15, years of experience
+2.3.2: 10,000+, customers served
+2.3.3: 8, menu items
+
+3: Discover Our menu
+3.1.1: Original Chicken Burger
+3.1.2: Comes with a side of kajun fries
+3.1.3: $12.99
+3.2.1: Original Beef Burger
+3.2.2: Comes with a side of kajun fries
+3.2.3: $15.99
+3.3.1: Portobello mushroom burger
+3.3.2: Comes with a side of kajun fries
+3.3.3: $10.99
+3.4.1: Veggie burger
+3.4.2: Comes with a side of kajun fries
+3.4.3: $12.99
+3.5.1: Black bean burger
+3.5.2: Comes with a side of kajun fries
+3.5.3: $12.99
+3.6.1: Wild salmon burger
+3.6.2: Comes with a side of kajun fries
+3.6.3: $18.99
+3.7.1: rib eye steak
+3.7.2: Comes with a side of kajun fries
+3.7.3: $25.99
+3.8.1: sliced steak
+3.8.2: Comes with a side of kajun fries
+3.8.3: $35.99
+
+4: Make a reservation
+4.1: and discover our delicious menu
+
+5: We deliver
+
+6: Our delivery partners
+
+7: Our news blog
+7.1.1: How it's made
+7.1.2: Our Food Is Freshly Handmade Using Seasonal Ingredients And Using The Most Fresh Produce Locally Sourced.
+7.2.1:  New Starters
+7.2.2: We Are Always Looking For Ways To Improve Your Dining Experience With You That’s Why We Are Launching A
+Fresh New Line Of Delicious Starters
+7.3.2: Menu Update
+7.3.3: we’ve added some new delicious items to our menu. and we'll be adding various cocktails and mocktails to
+the menu soon.
+
+8. Contac us 
+8.1: Get started with your booking
+
+9. Hamburger Co 2020 - All Rights Reserved
