@@ -1,0 +1,23 @@
+body {
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  background-color: beige;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+  gap: 5px;
+}
+// .container {
+//   display: grid;
+//   grid-template-rows: 200px 500px;
+//   grid-template-columns: 40% 200px;
+// }
+
+.item {
+  background-color: blueviolet;
+  margin-bottom: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,22 @@
+body {
+  padding: 20px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  background-color: beige;
+  -ms-grid-rows: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+  gap: 5px;
+}
+
+.item {
+  background-color: blueviolet;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+/*# sourceMappingURL=style.css.map */
