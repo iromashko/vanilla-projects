@@ -2,30 +2,23 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'montserrat', sans-serif;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
 }
 
 .product-detail {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .imagery {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 60%;
-          flex: 1 1 60%;
+  flex: 1 1 60%;
   width: 60%;
   padding: 50px 100px;
   background-color: #2484e4;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 .imagery img {
   width: 100%;
   height: 100%;
@@ -41,25 +34,20 @@
 }
 
 .detail {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+  flex: 1 1 40%;
   width: 40%;
   padding: 50px;
 }
-
 .detail h1 {
   color: #212121;
   font-size: 32px;
   font-weight: 900;
 }
-
 .detail h2 {
   color: #53565a;
   font-size: 22px;
   font-weight: 700;
 }
-
 .detail h3 {
   color: #53565a;
   font-size: 22px;
@@ -68,18 +56,12 @@
 }
 
 .btn_grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0px -15px;
 }
-
 .btn_grid .btn_wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  flex: 1 1 50%;
   width: 50%;
   padding: 15px;
 }
@@ -102,47 +84,37 @@ button {
   color: #313131;
   font-size: 20px;
   font-weight: 700;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 button:hover {
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-
 button.size {
   position: relative;
   z-index: 1;
 }
-
 button.size.selected::after {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-
 button.size::before, button.size::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   left: -3px;
   right: -3px;
   bottom: -3px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 button.size::after {
   z-index: -1;
   background-color: #fff;
   border: 3px solid #eee;
 }
-
 button.size::before {
   z-index: -2;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ed008d), to(#8d00ed));
   background-image: linear-gradient(to right, #ed008d, #8d00ed);
 }
 
@@ -150,27 +122,22 @@ button.size::before {
   background-color: #212121;
   color: #fff;
 }
-
 .colours .btn_wrap .blue.selected {
   background-color: #2484e4;
   color: #fff;
 }
-
 .colours .btn_wrap .red.selected {
   background-color: #af1e2d;
   color: #fff;
 }
-
 .colours .btn_wrap .yellow.selected {
   background-color: #ffce00;
   color: #212121;
 }
-
 .colours .btn_wrap .white.selected {
   background-color: #eee;
   color: #212121;
 }
-
 .colours .btn_wrap .coral.selected {
   background-color: #ff6c37;
   color: #fff;
@@ -178,14 +145,11 @@ button.size::before {
 
 .submit {
   margin-top: 30px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #ed008d), to(#8d00ed));
   background-image: linear-gradient(to right, transparent 50%, #ed008d 50%, #8d00ed 100%);
   background-position: 0% 50%;
   background-size: 200%;
-  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
-
 .submit:hover {
   color: #fff;
   background-position: 100% 50%;
@@ -207,5 +171,4 @@ button.size::before {
   100% {
     opacity: 1;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

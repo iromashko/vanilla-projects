@@ -1,21 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
 }
@@ -28,12 +21,10 @@ body {
   width: calc(100vw + 60px);
   height: calc(100vh + 60px);
   z-index: -1;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
+  filter: blur(0px);
 }
 
 .loading-text {
   font-size: 50px;
   color: #fff;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

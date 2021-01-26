@@ -2,7 +2,7 @@
 body,
 button,
 input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -43,7 +43,6 @@ input {
   font-weight: 200;
   outline: none;
 }
-
 input:disabled {
   background-color: #fff;
   opacity: 0.6;
@@ -56,11 +55,9 @@ button {
   border: none;
   outline: none;
 }
-
 button:hover {
   opacity: 0.9;
 }
-
 button:disabled {
   opacity: 0.3;
 }
@@ -72,5 +69,4 @@ h2 {
   font-size: 144px;
   margin: 12px 0;
   padding-left: 100px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

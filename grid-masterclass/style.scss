@@ -234,8 +234,9 @@ header {
 
 #menu {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 35vw));
   grid-template-rows: 20rem 1fr 10rem;
+  justify-content: center;
   gap: 2rem;
 
   .section-heading {
@@ -262,6 +263,44 @@ header {
   &-content--container {
     display: grid;
     grid-template-columns: max-content 1fr;
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  &-price {
+    color: #d94545;
+    font-size: 1.8rem;
+  }
+}
+
+
+.subsection {
+  display: grid;
+  grid-template-rows: 30rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  
+  &-reserve {
+    background: url(/grid-masterclass/img/subsection-1.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+  &__sub-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-top: 1rem;
+    font-style: italic;
   }
 }
 

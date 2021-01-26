@@ -21,21 +21,14 @@
 *::after {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-family: motiva-sans, sans-serif;
   background-color: var(--clr-4);
   background-image: url(/signup-form/steam-bg.jpg);
@@ -50,7 +43,6 @@ body {
 a {
   color: var(--clr-1);
 }
-
 a:hover {
   color: inherit;
 }
@@ -68,12 +60,8 @@ strong {
 }
 
 .flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .title,
@@ -86,46 +74,31 @@ strong {
 }
 
 .steam-signup-form {
-  display: -ms-grid;
   display: grid;
   width: 960px;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
-  -ms-grid-columns: 35% minmax(500px, 1fr) 1em;
-      grid-template-columns: 35% minmax(500px, 1fr) 1em;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 35% minmax(500px, 1fr) 1em;
   position: relative;
 }
 
 .front {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
   background-color: var(--clr-2);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0)), to(var(--clr-dark)));
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), var(--clr-dark));
   padding: 3rem;
   width: 93%;
-  grid-row: 1 / -1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
+  grid-row: 1/-1;
+  grid-column: 2/3;
 }
 
 .back {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
+  order: 1;
+  grid-row: 2/3;
+  grid-column: 1/2;
   padding: 3rem;
 }
-
 .back::after {
-  content: '';
+  content: "";
   display: block;
   background: var(--clr-3);
   position: absolute;
@@ -134,9 +107,7 @@ strong {
   bottom: 0;
   left: 0;
   z-index: -1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+  grid-row: 2/3;
 }
 
 .list--unstyled {
@@ -144,7 +115,6 @@ strong {
   padding: 0;
   list-style: none;
 }
-
 .list li {
   margin-bottom: 1em;
 }
@@ -162,13 +132,9 @@ strong {
 .form {
   margin: 1.5em 0 0;
 }
-
 .form__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .form__text {
   all: unset;
   display: block;
@@ -177,11 +143,9 @@ strong {
   width: 95%;
   padding: 0.6em;
 }
-
 .form__checkbox {
   margin-right: 0.5em;
 }
-
 .form__tooltip {
   font-size: var(--fs-small);
   background: var(--clr-dark);
@@ -190,13 +154,10 @@ strong {
   height: 1rem;
   border-radius: 50%;
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-left: 0.5em;
   position: relative;
 }
-
 .form__tooltip::after {
   content: attr(data-tooltip);
   display: none;
@@ -208,7 +169,6 @@ strong {
   text-align: left;
   width: 250px;
 }
-
 .form__tooltip:hover::after {
   display: block;
 }
@@ -229,20 +189,12 @@ strong {
   color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   font-weight: var(--fw-3);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform ease-in-out 150;
-  transition: -webkit-transform ease-in-out 150;
+  transform: scale(1);
   transition: transform ease-in-out 150;
-  transition: transform ease-in-out 150, -webkit-transform ease-in-out 150;
 }
-
 .button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 .button + * {
   margin-left: 2em;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
