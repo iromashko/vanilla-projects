@@ -54,6 +54,10 @@ img {
   width: 100%;
 }
 
+p {
+  color: #8a8a8a;
+}
+
 body {
   font-size: 1.4rem;
   font-family: 'Oswald', sans-serif;
@@ -92,6 +96,7 @@ header {
   &__bg-container {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
+    overflow-y: hidden;
   }
 
   &__content {
@@ -127,7 +132,7 @@ header {
   text-transform: uppercase;
   padding: 1rem 4.5rem;
   margin: 1.5rem 3rem;
-  transition: all .25s linear;
+  transition: all 0.25s linear;
   color: #fff;
   line-height: 1.6;
 
@@ -149,3 +154,114 @@ header {
     font-size: 2.6rem;
   }
 }
+
+#about {
+  background: url(/grid-masterclass/img/about-bg.jpg) bottom no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 25rem repeat(2, minmax(0, 1fr)) 25rem;
+  grid-template-rows: 20rem 1fr 20rem;
+  grid-template-areas:
+    '. title title .'
+    '. content-left content-right .'
+    'figures figures figures figures';
+  width: 100%;
+}
+
+#about .section-heading {
+  grid-area: title;
+  text-align: center;
+}
+
+.section-heading {
+  color: #232323;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 6rem;
+  align-self: center;
+  justify-self: center;
+
+  &__back,
+  &__front {
+    display: block;
+  }
+
+  &__back {
+    font-family: 'Playfair Display', serif;
+    opacity: 0.2;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 4rem;
+  }
+}
+
+.about {
+
+  &__content-left {
+    grid-area: content-left;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+
+    p {
+      color: #232323;
+    }
+  }
+
+  &__content-right {
+    grid-area: content-right;
+  }
+
+  &__figures {
+    grid-area: figures;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 20rem);
+    text-align: center;
+  }
+
+  &__figure-number {
+    font-size: 7rem;
+    line-height: 5.6rem;
+    font-weight: 300;
+  }
+
+  &__figure-text {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 20rem 1fr 10rem;
+  gap: 2rem;
+
+  .section-heading {
+    grid-column: span 2;
+  }
+}
+
+.menu__item {
+  display: grid;
+  grid-template-columns: 10rem 1fr min-content;
+  column-gap: 1.5rem;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  &-line {
+    width: 100%;
+    border-bottom: 2px dotted #cfcece;
+    align-self: center;
+  }
+
+  &-content--container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+}
+
