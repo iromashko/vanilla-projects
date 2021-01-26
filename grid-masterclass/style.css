@@ -167,6 +167,7 @@ header {
   font-size: 6rem;
   align-self: center;
   justify-self: center;
+  text-align: center;
 }
 .section-heading__back, .section-heading__front {
   display: block;
@@ -271,4 +272,47 @@ header {
   font-size: 2.6rem;
   margin-top: 1rem;
   font-style: italic;
+  text-transform: capitalize;
+}
+
+#delivery {
+  display: grid;
+  grid-template-rows: 20rem 1fr 10rem;
+}
+
+.image-grid {
+  display: grid;
+  grid: repeat(6, 10rem)/repeat(6, 1fr);
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+.image-grid img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.img2 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.img3 {
+  grid-column: span 2;
+  grid-row: span 4;
+}
+
+.img4 {
+  grid-column: span 2;
+  grid-row: span 4;
+}
+
+.img7, .img8 {
+  grid-column: span 2;
+  grid-row: span 2;
 }/*# sourceMappingURL=style.css.map */
