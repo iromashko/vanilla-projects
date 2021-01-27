@@ -14,8 +14,36 @@
   <body>
     <header>
       <a href="/grid-masterclass" class="brand">
-        <img src="./img/logos/hamburgerco-light.png" alt="hamburgerco logo" />
+        <img
+          src="/grid-masterclass/img/logos/hamburgerco-light.png"
+          alt="hamburgerco logo"
+        />
       </a>
+      <input type="checkbox" id="navToggle" />
+      <label for="navToggle" class="nav-toggle__icon">
+        <span class="nav-toggle__icon-span"></span>
+      </label>
+      <nav>
+        <ul class="nav__links">
+          <li>
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Menu</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Delivery</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">News</a>
+          </li>
+          <li>
+            <a href="mailTo:contact@hamburger.co" class="nav__link"
+              >contact@hamburger.co</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -280,7 +308,7 @@
               <a href="#" class="read-more">Read more</a>
             </div>
           </article>
-          <article>
+          <article class="blog--flipped">
             <div class="blog__img">
               <img src="/grid-masterclass/img/article.jpg" alt="article" />
               <div class="blog__share-btn">
@@ -314,6 +342,89 @@
           </article>
         </div>
       </section>
+
+      <section id="contact">
+        <div class="form">
+          <h2>Contact Us</h2>
+          <div class="form-group">
+            <fieldset>
+              <legend>Lorem ipsum dolor sit amet.</legend>
+              <label for="name">
+                <input type="text" name="name" placeholder="Your Name" />
+              </label>
+              <label for="email">
+                <input type="email" name="email" placeholder="Your Email" />
+              </label>
+              <label for="subject">
+                <input type="text" name="subject" placeholder="Subject" />
+              </label>
+              <label for="message">
+                <textarea
+                  type="text"
+                  name="message"
+                  placeholder="Your Message"
+                ></textarea>
+              </label>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+        </div>
+        <div class="contact-images">
+          <img src="/grid-masterclass/img/contact-2.jpg" alt="Contact 2" />
+          <img src="/grid-masterclass/img/contact-1.jpg" alt="Contact 1" />
+          <img src="/grid-masterclass/img/contact-3.jpg" alt="Contact 3" />
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img
+            src="/grid-masterclass/img/logos/hamburgerco-dark.png"
+            alt="logo1"
+          />
+        </div>
+        <div class="footer__links">
+          <ul>
+            <li>
+              <a href="#about" class="footer__link">about</a>
+            </li>
+            <li>
+              <a href="#menu" class="footer__link">menu</a>
+            </li>
+            <li>
+              <a href="#delivery" class="footer__link">delivery</a>
+            </li>
+            <li>
+              <a href="#news" class="footer__link">news</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social__links">
+          <ul>
+            <li>
+              <a href="#about" class="social__link">
+                <span class="icon-facebook2"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#menu" class="social__link"
+                ><span class="icon-instagram"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#delivery" class="social__link"
+                ><span class="icon-twitter"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </footer>
   </body>
 </html>

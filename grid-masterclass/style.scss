@@ -58,6 +58,10 @@ p {
   color: #8a8a8a;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-size: 1.4rem;
   font-family: 'Oswald', sans-serif;
@@ -83,6 +87,75 @@ header {
 
 .brand {
   display: block;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+#navToggle,
+.nav-toggle__icon,
+nav {
+  position: absolute;
+  right: 0;
+}
+
+#navToggle {
+  width: 5rem;
+  height: 5rem;
+  opacity: 0;
+
+  &:checked ~ nav {
+    transform: translateX(0);
+    position: fixed;
+    top: 0;
+  }
+
+  &:checked ~ .nav-toggle__icon {
+    position: fixed;
+  }
+}
+
+.nav-toggle__icon {
+  padding: 2rem;
+  cursor: pointer;
+  z-index: 11;
+  top: 1rem;
+
+  &-span {
+    display: block;
+    width: 3.5rem;
+    height: 1.5px;
+    background-color: #fff;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 3.5rem;
+      height: 1.5px;
+      position: absolute;
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 1.2rem;
+    }
+    &::after {
+      bottom: 1.2rem;
+    }
+  }
+}
+
+nav {
+  background-color: #d94545;
+  width: 30rem;
+  height: 100vh;
+  display: grid;
+  place-items: center center;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
 }
 
 #banner {
@@ -90,6 +163,40 @@ header {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(3, 1fr);
+}
+
+.nav {
+  &__links {
+    li {
+      display: block;
+      padding: 1rem;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.2s linear;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      bottom: -5px;
+      left: 0;
+      transform: translateX(-100%) scale(0);
+      transition: all 0.2s linear;
+    }
+    
+    &:hover::after {
+      transform: translateX(0) scale(1);
+    }
+  }
 }
 
 .banner {
@@ -121,6 +228,11 @@ header {
       line-height: 10.8rem;
     }
   }
+
+  &__bg-image {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .btn {
@@ -135,6 +247,7 @@ header {
   transition: all 0.25s linear;
   color: #fff;
   line-height: 1.6;
+  border: none;
 
   &:hover {
     background: linear-gradient(to bottom right, #f86d6d, #f88e6d);
@@ -377,4 +490,142 @@ header {
     grid-template-rows: auto 1fr;
     max-width: 35rem;
   }
+
+  &__body {
+    padding: 2rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__excerpt {
+    color: #8a8a8a;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__share-btn {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  &--flipped {
+    .blog__img {
+      grid-row: 2 / 3;
+    }
+
+    .blog__share-btn {
+      top: -20px;
+      bottom: unset;
+    }
+  }
+}
+
+.read-more {
+  color: #d94545;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: repeat(2, 60rem);
+  grid-template-rows: 1fr 5rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.form {
+  border: 1px solid #dedede;
+  padding: 2rem 4rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  color: #8a8a8a;
+  margin: 0 auto 3rem auto;
+}
+
+input,
+textarea {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  color: #232323;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dedede;
+}
+
+label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.contact-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 25rem 20rem;
+  gap: 1rem;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+
+    &:first-child {
+      grid-column: span 2;
+    }
+  }
+}
+
+.footer {
+  &-top {
+    background: url(/grid-masterclass/img/footer.jpg) center/cover no-repeat;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    place-items: center center;
+    padding: 2rem;
+  }
+
+  &-logo {
+    width: 7.5rem;
+  }
+
+  &__links {
+  }
+
+  &-bottom {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+.footer__link,
+.social__link {
+  color: #232323;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
