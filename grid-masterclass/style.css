@@ -312,7 +312,42 @@ header {
   grid-row: span 4;
 }
 
-.img7, .img8 {
+.img7,
+.img8 {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.delivery-partners {
+  display: grid;
+  grid-template-columns: repeat(2, 5rem) 10rem 15rem;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subsection-delivery {
+  background: url(/grid-masterclass/img/subsection-2.jpg) center no-repeat;
+  background-size: cover;
+}
+.subsection-delivery h2 {
+  font-weight: 300;
+  font-size: 2.6rem;
+  line-height: 1.4;
+}
+
+#news {
+  display: grid;
+  grid-template-rows: 20rem 1fr 10rem;
+  justify-content: center;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.blog article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  max-width: 35rem;
 }/*# sourceMappingURL=style.css.map */
