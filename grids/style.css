@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #007340;
+  --secondary-color: #fd0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +31,8 @@ body > header, body > main, body > footer {
   padding: 0 16px;
 }
 body > header {
-  background: #007340;
-  box-shadow: 0 20px 50px -20px #007340;
+  background: var(--primary-color);
+  box-shadow: 0 20px 50px -20px var(--primary-color);
   z-index: 1;
   display: grid;
   grid: 1fr/auto -webkit-min-content;
@@ -36,16 +41,82 @@ body > header {
 }
 body > header i {
   font-size: 2rem;
-  color: #fd0;
+  color: var(--primary-color);
 }
 body > header a {
   font-size: 3rem;
-  color: #fd0;
+  color: var(--secondary-color);
   text-decoration: none;
+}
+body > header div {
+  display: grid;
+  place-items: center center;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
 }
 body > main {
   background: #fff;
+  display: grid;
+  grid: "store-search" -webkit-max-content "main-delivery" -webkit-max-content "store-list" 1fr/1fr;
+  grid: "store-search" max-content "main-delivery" max-content "store-list" 1fr/1fr;
+  row-gap: 2.4rem;
+  padding-top: 2.4rem;
 }
 body > footer {
-  background: #fd0;
+  background: var(--secondary-color);
+}
+
+#store-search-container {
+  grid-area: store-search;
+}
+#store-search-container form {
+  border-bottom: 1px solid #8a8;
+}
+#store-search-container form i {
+  width: 3rem;
+  height: 3rem;
+}
+#store-search-container form input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  background: transparent;
+  color: #262;
+}
+
+#main-delivery-container {
+  grid-area: main-delivery;
+  padding-top: 1.6rem;
+  display: grid;
+  grid: -webkit-min-content max-content/minmax(-webkit-max-content, 1fr) minmax(-webkit-max-content, 3fr);
+  grid: min-content max-content/minmax(max-content, 1fr) minmax(max-content, 3fr);
+  gap: 0.8rem;
+}
+#main-delivery-container .main-delivery-label {
+  color: #534331;
+  font-weight: 400;
+  order: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#main-delivery-container .main-delivery-choice {
+  border: 1px solid #262;
+  padding: 0.8rem;
+  order: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#store-list-container {
+  grid-area: store-list;
 }/*# sourceMappingURL=style.css.map */
