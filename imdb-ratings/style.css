@@ -1,0 +1,173 @@
+:root {
+  --blue: #005cc8;
+  --bg-gray: rgba(241, 241, 241, 0.4);
+  --gray: rgb(63,63,63);
+}
+
+* {
+  font-family: "Inter";
+}
+
+body {
+  text-align: center;
+}
+
+main {
+  width: 900px;
+  display: inline-block;
+}
+
+hgroup {
+  color: var(--blue);
+}
+hgroup h1 {
+  margin-bottom: 5px;
+}
+hgroup p {
+  margin-top: 5px;
+  color: #7c7c7c;
+  font-size: 18px;
+}
+
+#movieinfo {
+  display: flex;
+  height: 300px;
+}
+
+#movielist {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--bg-gray);
+}
+
+#moviepost {
+  width: 300px;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--bg-gray);
+}
+#moviepost h2 {
+  color: var(--blue);
+}
+#moviepost p {
+  color: #3f3f3f;
+  font-weight: 400;
+  font-size: 18px;
+}
+#moviepost p span {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.movieselect {
+  background-color: #f1f1f1;
+  color: gray;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.movieselect:hover {
+  background-color: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+
+#choicesubmit {
+  padding-top: 20px;
+}
+
+label {
+  padding: 5px;
+  color: gray;
+}
+
+#submit {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+#submit:hover {
+  background-color: var(--blue);
+  color: white;
+}
+#submit:focus {
+  outline: none;
+}
+
+#cbu, #cbu15, #cb12s, #cbpg {
+  cursor: pointer;
+}
+
+#feedback {
+  color: salmon;
+}
+
+#charts {
+  display: inline-table;
+}
+
+#cont {
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#cont div {
+  max-width: 100px;
+}
+#cont h2, #cont p {
+  margin: 0;
+}
+#cont h2 {
+  color: var(--blue);
+}
+#cont p {
+  color: var(--gray);
+}
+
+#legend {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#legend > div {
+  height: 25px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+}
+#legend > div > div {
+  border-radius: 10px;
+}
+#legend > div > p {
+  margin: 0 0 0 5px;
+  font-size: small;
+  color: gray;
+}
+
+#gross {
+  width: 600px;
+  height: 300px;
+}
+
+#dura {
+  width: 300px;
+  height: 300px;
+}
+
+#votes {
+  width: 900px;
+  height: 300px;
+  justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */
